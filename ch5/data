@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- ViewVC :: http://www.viewvc.org/ -->
+<head>
+<title>[guile] Log of /guile/guile-scsh/scsh.scm</title>
+<meta name="generator" content="ViewVC 1.1.5" />
+<link rel="shortcut icon" href="/viewvc/*docroot*/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/viewvc/*docroot*/styles.css" type="text/css" />
+
+</head>
+<body>
+<div class="vc_navheader">
+<table><tr>
+<td><strong><a href="/viewvc"><span class="pathdiv">/</span></a><a href="/viewvc/guile/">[guile]</a><span class="pathdiv">/</span><a href="/viewvc/guile/guile/">guile</a><span class="pathdiv">/</span><a href="/viewvc/guile/guile/guile-scsh/">guile-scsh</a><span class="pathdiv">/</span>scsh.scm</strong></td>
+<td style="text-align: right;"></td>
+</tr></table>
+</div>
+<div style="float: right; padding: 5px;"><a href="http://www.viewvc.org/" title="ViewVC Home"><img src="/viewvc/*docroot*/images/viewvc-logo.png" alt="ViewVC logotype" width="240" height="70" /></a></div>
+<h1>Log of /guile/guile-scsh/scsh.scm</h1>
+
+<p style="margin:0;">
+
+<a href="/viewvc/guile/guile/guile-scsh/"><img src="/viewvc/*docroot*/images/back_small.png" class="vc_icon" alt="Parent Directory" /> Parent Directory</a>
+
+| <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log"><img src="/viewvc/*docroot*/images/log.png" class="vc_icon" alt="Revision Log" /> Revision Log</a>
+
+
+
+
+</p>
+
+<hr />
+<table class="auto">
+
+
+
+<tr>
+<td>Links to HEAD:</td>
+<td>
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=markup">view</a>)
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=annotate">annotate</a>)
+</td>
+</tr>
+
+
+
+<tr>
+<td>Sticky Tag:</td>
+<td><form method="get" action="/viewvc/guile/guile/guile-scsh/scsh.scm" style="display: inline">
+<div style="display: inline">
+<input type="hidden" name="view" value="log"/>
+
+
+<select name="pathrev" onchange="submit()">
+<option value=""></option>
+
+<optgroup label="Branches">
+
+
+<option>MAIN</option>
+
+
+</optgroup>
+
+<optgroup label="Non-branch tags">
+
+
+<option>release_2-0-1</option>
+
+
+
+<option>release_2-0-0</option>
+
+
+
+<option>pre_split_scsh</option>
+
+
+
+<option>pre_core</option>
+
+
+
+<option>jimb_pre_merge_threads</option>
+
+
+
+<option>jimb_pre_gh_merge</option>
+
+
+
+<option>jimb_post_threads_merge</option>
+
+
+
+<option>jimb_post_gh_merge</option>
+
+
+
+<option>jimb_automake1_1n_works</option>
+
+
+
+<option>HEAD</option>
+
+
+</optgroup>
+
+</select>
+
+<input type="submit" value="Set" />
+</div>
+</form>
+
+</td>
+</tr>
+</table>
+ 
+
+
+
+
+
+
+
+<div>
+<hr />
+
+<a name="rev1.16"></a>
+<a name="release_2-0-1"></a>
+<a name="HEAD"></a>
+
+
+Revision <strong>1.16</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.16&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.16">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.16">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.16&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sun Oct 19 15:57:44 2003 UTC</em>
+(13 years, 2 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+<br />CVS Tags:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=HEAD"><strong>HEAD</strong></a>,
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=release_2-0-1"><strong>release_2-0-1</strong></a>
+
+
+
+
+
+
+<br />Changes since <strong>1.15: +1 -1 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.15&amp;r2=1.16">previous 1.15</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* scsh.scm: export open-string-source (from Paul Emsley).
+        * version 2.0.1.
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.15"></a>
+<a name="release_2-0-0"></a>
+
+
+Revision <strong>1.15</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.15&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.15">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.15">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.15&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Aug  4 21:05:06 2001 UTC</em>
+(15 years, 5 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+<br />CVS Tags:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=release_2-0-0"><strong>release_2-0-0</strong></a>
+
+
+
+
+
+
+<br />Changes since <strong>1.14: +1 -0 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.14&amp;r2=1.15">previous 1.14</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* utilities.scm (delete, filter, first, fold, fold-right, any, every):
+	don't export, to avoid replacing (srfi srfi-1) definitions.
+
+	* awk.scm, defrec.scm, glob.scm, scsh.scm, rx/parse.scm,
+	procobj.scm, utilities.scm: rx/re-subst.scm, rx/re-syntax.scm,
+	rx/re.scm, rx/rx-lib.scm: use (srfi srfi-1) for procs removed from
+	utilities.scm.
+
+	* awk.scm, defrec.scm, glob.scm, rx/parse.scm, rx/re-subst.scm,
+	rx/re-syntax.scm, rx/rx-lib.scm: don't use (scsh utilities).
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.14"></a>
+
+
+Revision <strong>1.14</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.14&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.14">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.14">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.14&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Aug  4 15:22:08 2001 UTC</em>
+(15 years, 5 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.13: +30 -12 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.13&amp;r2=1.14">previous 1.13</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* rx/spencer.scm, rx/simp.scm, rx/rx-lib.scm, rx/re.scm,
+	rx/posixstr.scm, rx/parse.scm, rx/let-match.scm, rdelim.scm,
+	network.scm: upgraded with scsh 0.5.2 -&gt; 0.5.3 changes.
+
+	* rdelim.scm (read-delimited): don't use obsolete char-set-members.
+	don't use module (scsh cset-obsolete).  define guile-read-delimted!
+	before read-delimited! is redefined by export.
+
+	* rx/spencer.scm, rx/simp.scm, rx/rx-lib.scm, rx/re.scm, rx/parse.scm,
+	posixstr.scm, fr.scm: don't use module (scsh cset-obsolete).
+
+	* scsh.scm: use module (ice-9 format).  adjust home-directory and
+	exec-path-list.
+
+	* filesys.scm (rename-file), fluid.scm (make-fluid),
+	rdelim.scm (read-delimited, read-delimited!),
+	syscalls.scm (pipe, sleep): use module-ref to get bindings from
+	guile-core.
+
+	* README, USAGE, INCOMPAT: updated: now guile-scsh is based on
+	scsh 0.5.3.
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.13"></a>
+
+
+Revision <strong>1.13</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.13&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.13">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.13">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.13&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Jul  7 15:35:28 2001 UTC</em>
+(15 years, 6 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.12: +0 -1 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.12&amp;r2=1.13">previous 1.12</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* scsh.scm (run/port, run/file, run/string, run/strings, run/sexp,
+	run/sexps): don't export, they are defined in (scsh syntax).
+	* rw.scm, rdelim.scm: use re-export instead of export for
+	re-exporting from guile-core modules.
+	* char-set.scm: remove char-set- prefix from string-iter, since
+	it's no longer defined elsewhere.
+	* fname.scm, rx/posixstr.scm, rx/re-subst.scm, rx/re.scm:
+	use (srfi srfi-13) instead of (lib string-lib).
+	* syscalls.scm, utilities.scm, fluid.scm, filesys.scm, rdelim.scm,
+	rx/re.scm:
+	add deprecated blocks to create bindings for features that
+	override guile-core.
+	USAGE: updated.
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.12"></a>
+
+
+Revision <strong>1.12</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.12&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.12">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.12">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.12&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Jan 24 22:30:51 2001 UTC</em>
+(15 years, 11 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.11: +1 -0 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.11&amp;r2=1.12">previous 1.11</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* rdelim.scm: use module (ice-9 rdelim).
+	export %read-delimited!.
+        * awk.scm, scsh.scm: use module (scsh rdelim).
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.11"></a>
+
+
+Revision <strong>1.11</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.11&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.11">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.11">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.11&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Dec  6 23:10:39 2000 UTC</em>
+(16 years, 1 month ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.10: +1 -1 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.10&amp;r2=1.11">previous 1.10</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* init.scm: load (scsh fdports)
+	* scsh.scm (stringify): export.
+	* Makefile.am (pkgdata_DATA): add fdports.scm.
+	* fdports.scm: new file from scsh 0.5.2, with definitions already
+	provided by libguile removed.
+	* syntax-helpers.scm: export transcribe-process-form.
+	use module (scsh utilities) for check-arg.
+	* syntax.scm (scsh): don't use (scsh scsh) module, there are
+	mutual dependency problems.  code generated by macros in
+	syntax.scm will still need (scsh scsh).
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.10"></a>
+
+
+Revision <strong>1.10</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.10&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.10">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.10">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.10&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Dec  4 23:18:03 2000 UTC</em>
+(16 years, 1 month ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.9: +48 -6 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.9&amp;r2=1.10">previous 1.9</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* scsh.scm: define module (scsh scsh).
+	(command-line-arguments): define directly here instead of in init.scm.
+	(init-scsh-vars): call here instead of in init.scm.
+	(exit): removed, use Guile definition.
+
+	* syscalls.scm (define-errno-syscall): don't export
+	* network.scm: define module (scsh network).
+	(define-errno-syscall): copied from syscalls.scm.
+	* netconst.scm: define module (scsh netconst).
+	(maybe-define, maybe-define-so): export the generated definitions.
+	* fr.scm: define module (scsh fr).
+	* awk.scm: define module (scsh awk).
+	* newports.scm: define module (scsh newports).
+	* time.scm: define module (scsh time).
+	* filesys.scm: define module (scsh filesys).
+	rename-file: use guile primitive rename-file instead of
+	%rename-file.
+	* filemtch.scm: file removed.  it's deprecated/obsolete/broken.
+	* glob.scm: define module (scsh glob).
+	* fileinfo.scm: define module (scsh fileinfo).
+	* syntax.scm: define module (scsh syntax).
+	* init.scm: load new modules.
+	* Makefile.am (pkgdata_DATA): filemtch.scm removed.
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.9"></a>
+
+
+Revision <strong>1.9</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.9&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.9">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.9">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.9&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Sep  4 18:37:14 2000 UTC</em>
+(16 years, 4 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.8: +20 -17 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.8&amp;r2=1.9">previous 1.8</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.8"></a>
+
+
+Revision <strong>1.8</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.8&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.8">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.8">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.8&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Oct 11 20:53:25 1997 UTC</em>
+(19 years, 2 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.7: +1 -1 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.7&amp;r2=1.8">previous 1.7</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">	* init.scm, Makefile.am: add scsh-version.scm.
+	* scsh-version.scm (scsh-major-version): new file from scsh.
+
+	* init.scm (reading-error): defined.
+
+	* here.scm (#\&lt;): don't read-char from port.  use read-hash-extend.
+	(make-immutable!, immutable, unspecific): defined.
+
+	* Makefile.am, init.scm: add here.scm
+	* here.scm: new file from scsh.
+
+	* Makefile.am: add awk.scm, ekko.scm, enumconst.scm
+	* init.scm: load awk.scm, enumconst.scm
+	* enumconst.scm: new file from scsh.
+	* ekko.scm: new file from scsh.  change interpreter to guile.
+	* awk.scm: new file from scsh.  define awk at the end.
+	* init.scm (batch-mode?, set-batch-mode?!): deleted, now in
+	boot-9.scm.
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.7"></a>
+
+
+Revision <strong>1.7</strong> -
+
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?revision=1.7&amp;view=markup">view</a>)
+
+
+(<a href="/viewvc/*checkout*/guile/guile/guile-scsh/scsh.scm?revision=1.7">download</a>)
+
+(<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?annotate=1.7">annotate</a>)
+
+
+
+- <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.7&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Aug 30 19:37:20 1997 UTC</em>
+(19 years, 4 months ago)
+by <em>ghouston</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/guile/guile/guile-scsh/scsh.scm?view=log&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.6: +304 -0 lines</strong>
+
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/guile/guile/guile-scsh/scsh.scm?r1=1.6&amp;r2=1.7">previous 1.6</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">* filemtch.scm (split-pat): bug fix: would fail if pattern
+contained a slash.
+(file-match): use catch, not with-handler.
+* init.scm (rindex): bug fix: scsh's start argument is
+string-rindex's end.
+* init.scm, Makefile.am: add new files.
+

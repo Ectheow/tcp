@@ -1,0 +1,13 @@
+cats
+onecat
+twocat
+threecats
+fourcats
+fivecats
+sixcats
+ac
+be
+mats
+wats
+rats
+vats

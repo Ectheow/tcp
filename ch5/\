@@ -1,0 +1,27 @@
+/* tail.c: print the last n lines of its input.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAXLINES 5000
+char *lines[MAXLINES];
+
+int main(int argc, char *argv[])
+{
+    int n, startline, lastline;
+
+    if (argc > 2) {
+        print("Error: too many arguments just -N for arguments\n");
+        return 1;
+    } else {
+        n = atoi(argv[1]);
+        n = n > MAXLINES ? n : MAXLINES;
+    }
+
+    while(_getline(line, MAXLINE)) {
+        lines[lastline++] = line;
+        if (
+    }
+
+    
+}

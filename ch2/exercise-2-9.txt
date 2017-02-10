@@ -1,0 +1,52 @@
+Exercise 2-9. In a two's complement number system, x &= (x - 1) deletes the
+rightmost 1-bit in x. Explain why. Use this observation to write a faster
+version of bitcount.
+    Either:
+        1. x is odd, and x-1 is even
+        2. x is even, and x-1 is odd.
+
+1. If x is odd and x-1 is even, then the rightmost bit in x must be the
+rightmost bit in the whole vector, position 0. And by definition of even,
+position 0 must not be set in x-1, so x & (x - 1) will clear the rightmost bit,
+since one has a set bit and the other does not. 
+
+2. If x is even and x-1 is odd,
+    * x-1 must be less than x.  subtracting just one from x, an even number,
+      means that the rightmost bit would simply turn into ones, at a position
+      one less, i.e.:
+            
+            1010 =>   1001
+           10100 =>  10011
+          101000 => 100111 
+      That means that, if the rightmost bit is in position p_1 for x, and
+      position p_2 for x-1, then all bits from p_1 down are guaranteed to be
+      different, so when you & them, they all become zero, including bit p_1.
+
+To write a new bitcount, x &= (x - 1) until x is zero, is the number of bits in
+x.
+
+    x = 3
+
+    x = 0011
+
+    loop 0 
+    x == 0 ? no ==> bits += 1==
+                    bits == 1
+    x &= (x - 1) ==
+        0011 &= 0010 ==
+        x <= 0010
+
+
+    loop 1
+    x == 0 ? no ==> bits += 1 ==
+                    bits ==  2
+
+    x &= (x - 1) ==
+        0010 &= 0001 ==
+        x <= 0000
+
+    loop 2 
+    x == 0 ? yes => terminate
+
+
+    bits = 2
